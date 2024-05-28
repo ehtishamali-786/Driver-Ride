@@ -28,32 +28,31 @@ const Header = () => {
         path: '/aboutUs',
       },
       {
-        name: 'CONTECT US',
+        name: 'CONTACT US',
         path: '/contactUs',
       },
     ];
   return (
-    <header className="text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    
+    <header className=" flex justify-evenly items-center text-white  z-[999] ">
+      <div className="mt-2">
         <img src={Logo} alt="logo"/>
+      </div>
         <div
-        className={` flex  border-gray-200   px-4 lg:px-6 py-2.5   bg-opacity-0`}
-      >
-        <div
-          className={` mt-6 w-[75%] lg:w-[75%] lg:block  items-center `}
+          className={`  flex items-center justify-center  gap-10  `}
         >
-          <ul className='flex flex-col mt-4  xxs:justify-center xxs:items-center     xl:text-[20px] lg:text-[16px] lg:flex-row xl:space-x-8 xxl:space-x-16 lg:space-x-8 lg:mt-0'>
+          <ul className='flex flex-col mt-4  xxs:justify-center xxs:items-center  font-Poppins   text-[15px] lg:flex-row   space-x-1 '>
             {navLinks.map((item, index) => {
               return (
                 <Link href={item.path}>
                   <li
                     key={index}
-                    className={` py-2 px-0 rounded-full   cursor-pointer `}
+                    className={` py-1 px-4 rounded-full bg-opacity-60 shadow-md  cursor-pointer `}
                     onClick={() => setIsActive(item?.path)}
                     style={{
                       backgroundColor:
                         item?.path === isActive ? '#FF0080' : '',
-                        
+                        opacity: item?.path === isActive && '60%'
                     }}
                   >
                     {item.name}
@@ -62,9 +61,17 @@ const Header = () => {
               );
             })}
           </ul>
+          <div className='flex mt-4 gap-1 '>
+          <p className='font-Poppins text-[18px] font-[500] cursor-pointer'>
+            Login
+          </p>/
+          <p className='font-Poppins text-[18px] font-[500] cursor-pointer'>
+            Register
+          </p>
         </div>
-      </div>
-      </div>
+        </div>
+    
+      
     </header>
   );
 };
