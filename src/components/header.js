@@ -36,7 +36,9 @@ const Header = () => {
     
     <header className=" flex justify-evenly items-center text-white  z-[999] ">
       <div className="mt-2">
+        <Link to={'/'}>
         <img src={Logo} alt="logo"/>
+        </Link>
       </div>
         <div
           className={`  flex items-center justify-center  gap-10  `}
@@ -44,7 +46,7 @@ const Header = () => {
           <ul className='flex flex-col mt-4  xxs:justify-center xxs:items-center  font-Poppins   text-[15px] lg:flex-row   space-x-1 '>
             {navLinks.map((item, index) => {
               return (
-                <Link href={item.path}>
+                <Link to={isActive}>
                   <li
                     key={index}
                     className={` py-1 px-4 rounded-full bg-opacity-60 shadow-md  cursor-pointer `}

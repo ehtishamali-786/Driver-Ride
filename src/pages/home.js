@@ -81,11 +81,13 @@ const Home = () => {
               <p className='text-white'>A small river named Duden flows by their place and supplies it with the necessary regalia.</p>
             </div>
             </Link>
+            <Link to={'city-to-city'}>
             <div className="bg-white p-4 rounded shadow-lg h-[300px]  flex flex-col justify-end "style={{ backgroundImage: `url(${CityToCity})`,backgroundSize:'cover' }}>
             
               <h3 className="text-xl font-semibold text-white ">City to City Rides</h3>
               <p className='text-white'>A small river named Duden flows by their place and supplies it with the necessary regalia.</p>
             </div>
+            </Link>
             <div className="bg-white p-4 rounded shadow-lg h-[300px]  flex flex-col justify-end "style={{ backgroundImage: `url(${FullDayImage})`,backgroundSize:'cover' }}>
               
               <h3 className="text-xl font-semibold text-white">By Hour And Full Day</h3>
